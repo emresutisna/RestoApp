@@ -29,9 +29,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   flutter_svg: ^0.18.0
-  provider: ^4.3.1
+  http: ^0.12.2
+  provider: ^4.3.2+1
   animations: ^1.1.0
   lottie: ^0.7.0
+  data_connection_checker: ^0.3.4
 
 dev_dependencies:
   flutter_test:
@@ -52,7 +54,6 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/restaurants.json
     - assets/lottie/
 
   # An image asset can refer to one or more resolution-specific "variants", see

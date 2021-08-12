@@ -23,7 +23,7 @@ class Tabs extends StatelessWidget {
         boxShadow: [kDefaultShadow],
       ),
       child: DefaultTabController(
-        length: 3,
+        length: 4,
         child: TabBar(
           indicator: BoxDecoration(
             color: kPrimaryColor,
@@ -38,6 +38,7 @@ class Tabs extends StatelessWidget {
             Tab(text: "Overview"),
             Tab(text: "Food"),
             Tab(text: "Drink"),
+            Tab(text: "Review"),
           ],
         ),
       ),

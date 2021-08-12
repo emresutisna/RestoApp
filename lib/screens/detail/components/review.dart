@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:restaurant_app/data/model/food.dart';
+import 'package:restaurant_app/data/model/customer_review.dart';
 
-class FoodView extends StatelessWidget {
-  final List<Food> foods;
+class ReviewWidget extends StatelessWidget {
+  final List<CustomerReview> reviews;
 
-  FoodView({Key key, this.foods}) : super(key: key);
+  ReviewWidget({Key key, this.reviews}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,21 +15,23 @@ class FoodView extends StatelessWidget {
           shrinkWrap: true,
           physics: NeverScrollableScrollPhysics(),
           padding: const EdgeInsets.all(8),
-          itemCount: foods.length,
+          itemCount: reviews.length,
           itemBuilder: (BuildContext context, int index) {
-            return _buildFoodItem(context, foods[index]);
+            return _buildReviewItem(context, reviews[index]);
           }),
     );
   }
 }
 
-Widget _buildFoodItem(BuildContext context, Food food) {
+Widget _buildReviewItem(BuildContext context, CustomerReview review) {
   return Card(
     child: ListTile(
       contentPadding:
           const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      title: Text(food.name),
-      trailing: Icon(Icons.chevron_right),
+      title: Text(review.name),
+      subtitle: Text(review.review),
+      trailing: Text(review.date),
+      leading: Icon(Icons.chat_bubble),
     ),
   );
 }

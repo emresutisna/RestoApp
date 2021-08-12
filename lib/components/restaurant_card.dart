@@ -2,7 +2,7 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:restaurant_app/model/restaurant.dart';
+import 'package:restaurant_app/data/model/restaurant.dart';
 import 'package:restaurant_app/screens/detail/detail.dart';
 
 import '../constants.dart';
@@ -20,13 +20,13 @@ class RestaurantCard extends StatelessWidget {
         closedColor: Colors.transparent,
         closedElevation: 0,
         openElevation: 0,
-        closedBuilder: (context, action) => buildRestaurantCard(context),
-        openBuilder: (context, action) => DetailScreen(restaurant: restaurant),
+        closedBuilder: (context, action) => _buildRestaurantCard(context),
+        openBuilder: (context, action) => DetailScreen(id: restaurant.id),
       ),
     );
   }
 
-  Column buildRestaurantCard(BuildContext context) {
+  Column _buildRestaurantCard(BuildContext context) {
     return Column(
       children: <Widget>[
         Expanded(
@@ -38,7 +38,7 @@ class RestaurantCard extends StatelessWidget {
                   boxShadow: [kDefaultShadow],
                   image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: NetworkImage(restaurant.picture),
+                    image: NetworkImage(restaurant.pictureUrl()),
                   ),
                 ),
               ),

@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class EmptyView extends StatelessWidget {
+  final String lottie;
+  final String text;
+
+  const EmptyView({Key key, this.lottie, this.text}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -9,11 +14,12 @@ class EmptyView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Lottie.asset('assets/lottie/heart-break-or-unlike.json'),
+          Lottie.asset(this.lottie,
+              height: MediaQuery.of(context).size.height / 3),
           Text(
-            'No favorites data yet!',
+            this.text,
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 25,
             ),
           )
         ],

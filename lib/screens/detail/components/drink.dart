@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:restaurant_app/model/drink.dart';
+import 'package:restaurant_app/data/model/drink.dart';
 
 class DrinkView extends StatelessWidget {
-  final List<Drinks> drinks;
+  final List<Drink> drinks;
 
   DrinkView({Key key, this.drinks}) : super(key: key);
 
@@ -23,7 +23,7 @@ class DrinkView extends StatelessWidget {
   }
 }
 
-Widget _buildDrinkItem(BuildContext context, Drinks drink) {
+Widget _buildDrinkItem(BuildContext context, Drink drink) {
   return Card(
     child: ListTile(
       contentPadding:
