@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
-import 'package:restaurant_app/components/error_view.dart';
+import 'package:restaurant_app/widgets/error_view.dart';
 import 'package:restaurant_app/provider/detail_provider.dart';
 import 'package:restaurant_app/screens/detail/components/favorite_button.dart';
+import 'package:restaurant_app/screens/detail/components/review_button.dart';
 
-import '../../../constants.dart';
-import '../../../enums.dart';
+import '../../../common/constants.dart';
+import '../../../common/enums.dart';
 
 class Header extends StatelessWidget {
   final Size size;
@@ -21,9 +22,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<DetailProvider>(
       builder: (context, state, _) {
-        if (state.state == ResultState.Loading) {
-          return Center(child: CircularProgressIndicator());
-        } else if (state.state == ResultState.HasData) {
+        if (state.state == ResultState.HasData) {
           return Container(
             height: size.height * 0.4,
             child: Stack(
@@ -43,7 +42,6 @@ class Header extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Rating Box
                 Positioned(
                   bottom: 120,
                   child: Column(
@@ -117,13 +115,15 @@ class Header extends StatelessWidget {
                               ),
                             ],
                           ),
-                          FavoriteButton(),
+                          FavoriteButton(
+                            restaurant: state.result.restaurant,
+                          ),
+                          ReviewButton(),
                         ],
                       ),
                     ),
                   ),
                 ),
-                // Back Button
                 SafeArea(
                   child: IconButton(
                     icon: Container(

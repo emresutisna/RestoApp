@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:restaurant_app/components/restaurant_card.dart';
+import 'package:restaurant_app/screens/home/components/restaurant_card.dart';
 import 'package:restaurant_app/data/model/restaurant.dart';
 import 'package:restaurant_app/provider/restaurant_provider.dart';
-import 'package:restaurant_app/components/empty_view.dart';
+import 'package:restaurant_app/widgets/empty_view.dart';
 import 'dart:math' as math;
 
-import '../constants.dart';
-import '../enums.dart';
-import 'error_view.dart';
+import '../../../common/constants.dart';
+import '../../../common/enums.dart';
+import '../../../widgets/error_view.dart';
 
 class RestaurantCarousel extends StatefulWidget {
   @override
@@ -82,7 +82,10 @@ class _RestaurantCarouselState extends State<RestaurantCarousel> {
     );
   }
 
-  Widget _buildRestaurantSlider(int index, Restaurant restaurant) =>
+  Widget _buildRestaurantSlider(
+    int index,
+    Restaurant restaurant,
+  ) =>
       AnimatedBuilder(
         animation: _pageController,
         builder: (context, child) {

@@ -4,7 +4,7 @@ import 'package:restaurant_app/data/api/api_service.dart';
 import 'package:restaurant_app/provider/detail_provider.dart';
 import 'package:restaurant_app/screens/detail/components/category_list.dart';
 import 'package:restaurant_app/screens/detail/components/tab_view.dart';
-import '../../../constants.dart';
+import '../../../common/constants.dart';
 import 'header.dart';
 
 class Body extends StatelessWidget {

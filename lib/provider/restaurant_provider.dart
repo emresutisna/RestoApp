@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:restaurant_app/data/api/api_service.dart';
 import 'package:restaurant_app/data/model/restaurant.dart';
 
-import '../enums.dart';
+import '../common/enums.dart';
 
 class RestaurantsProvider extends ChangeNotifier {
   final ApiService apiService;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../../../constants.dart';
+import '../../../common/constants.dart';
 
 class DescriptionView extends StatelessWidget {
   final String description;

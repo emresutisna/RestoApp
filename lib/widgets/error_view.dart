@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:restaurant_app/constants.dart';
+import 'package:restaurant_app/common/constants.dart';
 
 class ErrorView extends StatelessWidget {
   final String text;

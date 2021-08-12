@@ -7,7 +7,7 @@ import 'package:restaurant_app/screens/detail/components/food.dart';
 import 'package:restaurant_app/screens/detail/components/review.dart';
 import 'package:restaurant_app/screens/detail/components/tabs.dart';
 
-import '../../../enums.dart';
+import '../../../common/enums.dart';
 import 'drink.dart';
 
 class TabView extends StatefulWidget {

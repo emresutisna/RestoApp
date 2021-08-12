@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/constants.dart';
+import 'package:restaurant_app/common/constants.dart';
 
 class Tabs extends StatelessWidget {
   final Size size;
@@ -16,7 +16,7 @@ class Tabs extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(kDefaultPadding / 2),
       padding: EdgeInsets.all(kDefaultPadding / 4),
-      width: size.width, // 80%
+      width: size.width,
       decoration: BoxDecoration(
         color: kSecondaryColor,
         borderRadius: BorderRadius.circular(12),

@@ -8,7 +8,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3),
-        () => Navigator.pushReplacementNamed(context, HomeScreen.routeName));
+        () => Navigator.pushNamed(context, HomeScreen.routeName));
 
     return Center(
       child: Container(

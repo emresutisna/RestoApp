@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/widgets/bottom_navbar.dart';
-import 'package:restaurant_app/common/enums.dart';
 
+import '../../common/enums.dart';
 import 'components/body.dart';
 
-class FavoriteScreen extends StatelessWidget {
-  static String routeName = '/favorite';
+class SettingScreen extends StatelessWidget {
+  static String routeName = '/setting';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Favorite Restaurant"),
+        title: Text("Setting"),
       ),
       body: Body(),
       bottomNavigationBar: BottomNavbar(
-        selectedMenu: MenuState.favorite,
+        selectedMenu: MenuState.setting,
       ),
     );
   }

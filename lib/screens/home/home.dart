@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:restaurant_app/components/bottom_navbar.dart';
-import 'package:restaurant_app/constants.dart';
-import 'package:restaurant_app/enums.dart';
+import 'package:restaurant_app/widgets/bottom_navbar.dart';
+import 'package:restaurant_app/common/constants.dart';
+import 'package:restaurant_app/common/enums.dart';
 
 import 'components/body.dart';
 

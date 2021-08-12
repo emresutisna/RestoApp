@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/components/bottom_navbar.dart';
-import 'package:restaurant_app/enums.dart';
+import 'package:restaurant_app/widgets/bottom_navbar.dart';
+import 'package:restaurant_app/common/enums.dart';
 
 import 'components/body.dart';
 

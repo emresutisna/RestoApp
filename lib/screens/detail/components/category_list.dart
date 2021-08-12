@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:restaurant_app/enums.dart';
+import 'package:restaurant_app/common/enums.dart';
 import 'package:restaurant_app/provider/detail_provider.dart';
 import 'package:restaurant_app/screens/detail/components/category_card.dart';
 
-import '../../../constants.dart';
+import '../../../common/constants.dart';
 
 class CategoryList extends StatelessWidget {
   @override

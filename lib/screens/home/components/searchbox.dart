@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:restaurant_app/provider/restaurant_provider.dart';
 
-import '../../../constants.dart';
+import '../../../common/constants.dart';
 
 class SearchBox extends StatefulWidget {
   @override
@@ -10,7 +10,7 @@ class SearchBox extends StatefulWidget {
 }
 
 class _SearchBoxState extends State<SearchBox> {
-  String query = '';
+  String _query = '';
   TextEditingController controller = new TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class _SearchBoxState extends State<SearchBox> {
                     controller: controller,
                     onChanged: (value) {
                       setState(() {
-                        query = value;
+                        _query = value;
                       });
                       if (value != '') {
                         state.searchRestaurants(value);
@@ -60,16 +60,16 @@ class _SearchBoxState extends State<SearchBox> {
                 ),
                 IconButton(
                   onPressed: () {
-                    if (query != '') {
+                    if (_query != '') {
                       state.fetchAllRestaurant();
                       controller.clear();
                       setState(() {
-                        query = '';
+                        _query = '';
                       });
                     }
                   },
                   iconSize: 25,
-                  icon: query == ''
+                  icon: _query == ''
                       ? Icon(
                           Icons.search,
                           size: 25,

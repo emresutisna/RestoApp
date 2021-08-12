@@ -16,8 +16,21 @@ class RestaurantResults {
         error: json['error'],
         message: json['message'] != null ? json['message'] : '',
         restaurants: List<Restaurant>.from(
-            json['restaurants'].map((x) => Restaurant.fromJson(x))),
+          json['restaurants'].map(
+            (x) => Restaurant.fromJson(x),
+          ),
+        ),
       );
+
+  Map<String, dynamic> toJson() => {
+        "error": error,
+        "message": message,
+        "restaurants": List<dynamic>.from(
+          restaurants.map(
+            (x) => x.toJson(),
+          ),
+        ),
+      };
 }
 
 class RestaurantResult {
@@ -76,4 +89,13 @@ class Restaurant {
             : null,
       );
   String pictureUrl() => ApiService.baseImageUrl + this.pictureId;
+
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "name": name,
+        "description": description,
+        "pictureId": pictureId,
+        "city": city,
+        "rating": rating,
+      };
 }

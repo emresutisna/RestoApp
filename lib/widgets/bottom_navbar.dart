@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:restaurant_app/screens/favorite/favorite.dart';
 import 'package:restaurant_app/screens/home/home.dart';
 import 'package:restaurant_app/screens/profile/profile.dart';
+import 'package:restaurant_app/screens/setting/setting.dart';
 
-import '../constants.dart';
-import '../enums.dart';
+import '../common/constants.dart';
+import '../common/enums.dart';
 
 class BottomNavbar extends StatelessWidget {
   final MenuState selectedMenu;
@@ -70,6 +71,18 @@ class BottomNavbar extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.pushNamed(context, ProfileScreen.routeName);
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              this.selectedMenu == MenuState.setting
+                  ? Icons.settings
+                  : Icons.settings_outlined,
+              size: 40,
+              color: kPrimaryColor,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, SettingScreen.routeName);
             },
           ),
         ],

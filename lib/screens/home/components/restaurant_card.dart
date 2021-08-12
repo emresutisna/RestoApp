@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurant_app/data/model/restaurant.dart';
 import 'package:restaurant_app/screens/detail/detail.dart';
 
-import '../constants.dart';
+import '../../../common/constants.dart';
 
 class RestaurantCard extends StatelessWidget {
   final Restaurant restaurant;

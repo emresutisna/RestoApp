@@ -1,3 +1,20 @@
+class CustomerReviewResults {
+  bool error;
+  String message;
+  List<CustomerReview> customerReviews;
+
+  CustomerReviewResults({this.error, this.message, this.customerReviews});
+
+  factory CustomerReviewResults.fromJson(Map<String, dynamic> json) =>
+      CustomerReviewResults(
+        error: json['error'],
+        message: json['message'],
+        customerReviews: List<CustomerReview>.from(
+          json['customerReviews'].map((x) => CustomerReview.fromJson(x)),
+        ),
+      );
+}
+
 class CustomerReview {
   final String name;
   final String review;
